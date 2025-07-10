@@ -2,76 +2,76 @@
 
 [cite_start]The Debit9 (D9T) Token is an ERC-20 token implemented on the Ethereum blockchain, designed with a unique debt management and burning mechanism to incentivize holding and stability[cite: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]. [cite_start]The smart contract includes functionalities for liquidity control, whitelisting, and a debt system that can be forgiven or burned[cite: 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72].
 
-**Contract Address (BSC):** `0xbc305b36d7a6cae9cf8597e8507528bd4a3563f5`
+Contract Address (BSC): `0xbc305b36d7a6cae9cf8597e8507528bd4a3563f5`
 
 ## Summary of Debit9 Token Usage
 
 The D9T Token serves as the primary currency within the Debit9 ecosystem. Below are its main uses and characteristics:
 
-* [cite_start]**Name and Symbol:** Debit9 (D9T) [cite: 1, 2]
-* [cite_start]**Decimals:** 6 [cite: 3]
-* [cite_start]**Max Supply (MAX_SUPPLY):** 10,000,000,000,000 D9T [cite: 3]
-* [cite_start]**Owner:** The owner (contract deployer) has control over administrative functions such as pausing the contract, setting liquidity pools, managing token burning, and adding/removing addresses from the blacklist[cite: 11, 37, 38, 39, 40, 81, 82, 83, 84, 89, 90, 91].
-* [cite_start]**Token Burning (Burn):** The contract has a burning mechanism[cite: 29, 30, 31, 32, 33]. [cite_start]Tokens can be burned by the user themselves, or by the owner on behalf of a user[cite: 29, 30]. [cite_start]Burning is also integrated into the debt mechanism for users who are not debt-exempt[cite: 67, 68, 69, 70, 71, 72].
-* [cite_start]**Pause/Unpause:** The owner can pause and unpause the contract, which restricts most token operations while paused[cite: 38, 39, 40].
-* [cite_start]**Liquidity Pools:** Addresses can be designated as "liquidity pools" by the owner[cite: 4, 82, 83]. [cite_start]Transactions involving liquidity pools activate certain contract logic, such as debt addition and hold time[cite: 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66].
-* **Debt System:**
-    * [cite_start]**Debt Accumulation:** When selling D9T to a liquidity pool, users can accumulate debt[cite: 63]. [cite_start]The debt increases by 50% of the transaction value, limited to a maximum of 100,000 D9T per user[cite: 8, 63, 64, 65].
-    * [cite_start]**Debt Forgiveness:** Debt can be forgiven over time (30 days for full forgiveness) or through a `quitDivida` function[cite: 44, 45, 46, 47, 48, 49, 50].
-    * [cite_start]**Debt Burning:** When a user with debt (and who is not debt-exempt) performs a transfer, a portion of the transferred amount (up to 50% of the transaction or the total debt, whichever is smaller) can be burned to settle the debt[cite: 67, 68, 69, 70, 71, 72].
-* [cite_start]**Hold Time:** When buying D9T from a liquidity pool, a dynamic hold time is applied to the buyer, requiring them to hold the tokens for a period before selling them[cite: 57, 58, 60, 61, 62]. [cite_start]The hold time ranges from 60 to 600 seconds, depending on the transaction value[cite: 8, 9, 60, 61, 62].
-* [cite_start]**Trusted Contracts:** Contracts can be marked as trusted by the owner to exempt them from certain security checks[cite: 6, 12, 84].
-* [cite_start]**Blacklist:** The owner can add or remove addresses from the blacklist, preventing listed addresses from performing transactions[cite: 15, 36, 37, 38].
-* [cite_start]**Debt Exemption:** The owner can exempt certain addresses from the debt burning mechanism[cite: 67, 85, 86, 87, 88, 89, 90, 91]. [cite_start]There is a list of exempt addresses that can be queried[cite: 7, 91].
-* [cite_start]**Single Transaction Per Block:** Each address is limited to one transaction per block to prevent certain manipulations[cite: 13, 14].
+ Name and Symbol: Debit9 (D9T) [cite: 1, 2]
+ Decimals: 6 [cite: 3]
+ Max Supply (MAX_SUPPLY): 10,000,000,000,000 D9T [cite: 3]
+ Owner: The owner (contract deployer) has control over administrative functions such as pausing the contract, setting liquidity pools, managing token burning, and adding/removing addresses from the blacklist[cite: 11, 37, 38, 39, 40, 81, 82, 83, 84, 89, 90, 91].
+ Token Burning (Burn): The contract has a burning mechanism[cite: 29, 30, 31, 32, 33]. [cite_start]Tokens can be burned by the user themselves, or by the owner on behalf of a user[cite: 29, 30]. [cite_start]Burning is also integrated into the debt mechanism for users who are not debt-exempt[cite: 67, 68, 69, 70, 71, 72].
+ Pause/Unpause: The owner can pause and unpause the contract, which restricts most token operations while paused[cite: 38, 39, 40].
+ Liquidity Pools: Addresses can be designated as "liquidity pools" by the owner[cite: 4, 82, 83]. [cite_start]Transactions involving liquidity pools activate certain contract logic, such as debt addition and hold time[cite: 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66].
+ Debt System:
+     Debt Accumulation: When selling D9T to a liquidity pool, users can accumulate debt[cite: 63]. [cite_start]The debt increases by 50% of the transaction value, limited to a maximum of 100,000 D9T per user[cite: 8, 63, 64, 65].
+     Debt Forgiveness: Debt can be forgiven over time (30 days for full forgiveness) or through a `quitDivida` function[cite: 44, 45, 46, 47, 48, 49, 50].
+     Debt Burning: When a user with debt (and who is not debt-exempt) performs a transfer, a portion of the transferred amount (up to 50% of the transaction or the total debt, whichever is smaller) can be burned to settle the debt[cite: 67, 68, 69, 70, 71, 72].
+ Hold Time: When buying D9T from a liquidity pool, a dynamic hold time is applied to the buyer, requiring them to hold the tokens for a period before selling them[cite: 57, 58, 60, 61, 62]. [cite_start]The hold time ranges from 60 to 600 seconds, depending on the transaction value[cite: 8, 9, 60, 61, 62].
+ Trusted Contracts: Contracts can be marked as trusted by the owner to exempt them from certain security checks[cite: 6, 12, 84].
+ Blacklist: The owner can add or remove addresses from the blacklist, preventing listed addresses from performing transactions[cite: 15, 36, 37, 38].
+ Debt Exemption: The owner can exempt certain addresses from the debt burning mechanism[cite: 67, 85, 86, 87, 88, 89, 90, 91]. [cite_start]There is a list of exempt addresses that can be queried[cite: 7, 91].
+ Single Transaction Per Block: Each address is limited to one transaction per block to prevent certain manipulations[cite: 13, 14].
 
 ## Benefits for Users and Why to Trust and Buy D9T
 
 The Debit9 (D9T) Token was designed with a focus on sustainability and incentivizing long-term holding, which translates into several benefits for users:
 
-1.  **Debt Burning Mechanism for Stability:** The debt and burning system helps manage token supply. [cite_start]By burning tokens from indebted users in certain transactions, the contract aims to reduce selling pressure and potentially increase token scarcity, benefiting long-term holders[cite: 59, 67, 68, 69, 70, 71, 72].
-2.  [cite_start]**Holding Incentive (Hold Time):** The hold time imposed after purchases from liquidity pools encourages users to hold their tokens for a period[cite: 57, 58, 60, 61, 62]. This can reduce short-term volatility and promote a more stable holder ecosystem.
-3.  **Transparency and Control:** The contract is public and the source code is available, allowing the community to audit and understand its operation. [cite_start]Owner actions, such as setting liquidity pools and activating burning, are emitted as events, providing transparency[cite: 17, 18, 19, 20, 21, 82, 83].
-4.  [cite_start]**Active Management:** The owner's ability to adjust parameters such as burn activation and liquidity pool management allows for active governance to adapt to market conditions and protect the ecosystem[cite: 81, 82, 83, 84, 85].
-5.  **Potential for Appreciation:** With scarcity mechanisms (burning) and holding incentives, D9T has the potential for long-term appreciation, attracting investors seeking stability and growth.
+1.  Debt Burning Mechanism for Stability: The debt and burning system helps manage token supply. [cite_start]By burning tokens from indebted users in certain transactions, the contract aims to reduce selling pressure and potentially increase token scarcity, benefiting long-term holders[cite: 59, 67, 68, 69, 70, 71, 72].
+2.  Holding Incentive (Hold Time): The hold time imposed after purchases from liquidity pools encourages users to hold their tokens for a period[cite: 57, 58, 60, 61, 62]. This can reduce short-term volatility and promote a more stable holder ecosystem.
+3.  Transparency and Control: The contract is public and the source code is available, allowing the community to audit and understand its operation. [cite_start]Owner actions, such as setting liquidity pools and activating burning, are emitted as events, providing transparency[cite: 17, 18, 19, 20, 21, 82, 83].
+4.  Active Management: The owner's ability to adjust parameters such as burn activation and liquidity pool management allows for active governance to adapt to market conditions and protect the ecosystem[cite: 81, 82, 83, 84, 85].
+5.  Potential for Appreciation: With scarcity mechanisms (burning) and holding incentives, D9T has the potential for long-term appreciation, attracting investors seeking stability and growth.
 
-**Why trust and buy D9T?**
+Why trust and buy D9T?
 Trust in D9T is built on a combination of:
-* [cite_start]**Defensive Mechanisms:** The blacklist system, the one-transaction-per-block restriction, and the ability to pause the contract provide layers of security against abuse and coordinated attacks[cite: 13, 14, 15, 36, 37, 38, 39, 40].
-* [cite_start]**Focus on Sustainability:** The debt, burning, and hold time features are designed to create a more sustainable environment less prone to rapid pumps and dumps[cite: 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72].
-* **Transparent Development:** The project is committed to transparency, providing access to the code and clear documentation.
+ Defensive Mechanisms: The blacklist system, the one-transaction-per-block restriction, and the ability to pause the contract provide layers of security against abuse and coordinated attacks[cite: 13, 14, 15, 36, 37, 38, 39, 40].
+ Focus on Sustainability: The debt, burning, and hold time features are designed to create a more sustainable environment less prone to rapid pumps and dumps[cite: 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72].
+ Transparent Development: The project is committed to transparency, providing access to the code and clear documentation.
 
 ## Roadmap
 
 Our roadmap for the Debit9 (D9T) Token is focused on ecosystem growth, token utility, and building a strong community.
 
-**Phase 1: Launch and Stabilization (Completed/Ongoing)**
-* Deployment of the D9T smart contract on the blockchain.
-* Initial contract audit to ensure security and functionality.
-* Token launch on selected decentralized exchanges (DEXs).
-    * Currently trading on PancakeSwap.
-    * Listed on CoinMarketCap (CMC) and GeckoTerminal.
-        * GeckoTerminal Pool: [https://www.geckoterminal.com/bsc/pools/0xa3d0d7e3c2b01a3eeb0bbc110d6b5198f9bb9a07](https://www.geckoterminal.com/bsc/pools/0xa3d0d7e3c2b01a3eeb0bbc110d6b5198f9bb9a07)
-        * CoinMarketCap DEX: [https://dex.coinmarketcap.com/token/bsc/0xbc305b36d7a6cae9cf8597e8507528bd4a3563f5/](https://dex.coinmarketcap.com/token/bsc/0xbc305b36d7a6cae9cf8597e8507528bd4a3563f5/)
-* Building an initial base of holders and community.
-* Monitoring and initial adjustments to debt and burning policies.
+Phase 1: Launch and Stabilization (Completed/Ongoing)
+ Deployment of the D9T smart contract on the blockchain.
+ Initial contract audit to ensure security and functionality.
+ Token launch on selected decentralized exchanges (DEXs).
+     Currently trading on PancakeSwap.
+     Listed on CoinMarketCap (CMC) and GeckoTerminal.
+         GeckoTerminal Pool: [https://www.geckoterminal.com/bsc/pools/0xa3d0d7e3c2b01a3eeb0bbc110d6b5198f9bb9a07](https://www.geckoterminal.com/bsc/pools/0xa3d0d7e3c2b01a3eeb0bbc110d6b5198f9bb9a07)
+         CoinMarketCap DEX: [https://dex.coinmarketcap.com/token/bsc/0xbc305b36d7a6cae9cf8597e8507528bd4a3563f5/](https://dex.coinmarketcap.com/token/bsc/0xbc305b36d7a6cae9cf8597e8507528bd4a3563f5/)
+ Building an initial base of holders and community.
+ Monitoring and initial adjustments to debt and burning policies.
 
-**Phase 2: Ecosystem Expansion (Next 6-12 months)**
-* **Integrations:** Seek partnerships and integrations with other DeFi platforms, wallets, and services.
-* **Tool Development:** Create additional tools for D9T holders, such as dashboards to monitor debts, balances, and transaction history.
-* **Debt Mechanism Enhancement:** Explore and implement possible enhancements to the debt system, such as different forgiveness models or accumulation criteria, based on community feedback.
-* **Incentives for Liquidity Pools:** Implement incentive programs for liquidity providers, aiming to increase the depth and stability of D9T pools.
+Phase 2: Ecosystem Expansion (Next 6-12 months)
+ Integrations: Seek partnerships and integrations with other DeFi platforms, wallets, and services.
+ Tool Development: Create additional tools for D9T holders, such as dashboards to monitor debts, balances, and transaction history.
+ Debt Mechanism Enhancement: Explore and implement possible enhancements to the debt system, such as different forgiveness models or accumulation criteria, based on community feedback.
+ Incentives for Liquidity Pools: Implement incentive programs for liquidity providers, aiming to increase the depth and stability of D9T pools.
 
-**Phase 3: Governance and Utility (Long-Term)**
-* **Decentralized Governance:** Gradual transition to a more decentralized governance model, allowing D9T holders to vote on important proposals for the future of the token and the ecosystem.
-* **New Use Cases:** Explore and develop new use cases for D9T, expanding its utility beyond its current mechanism, such as:
-    * Staking for rewards.
-    * Payments for partner services or products.
-    * Access to exclusive functionalities within the Debit9 ecosystem.
-* **Education and Awareness:** Launch educational and marketing campaigns to raise awareness about D9T, its unique mechanisms, and benefits.
+Phase 3: Governance and Utility (Long-Term)
+ Decentralized Governance: Gradual transition to a more decentralized governance model, allowing D9T holders to vote on important proposals for the future of the token and the ecosystem.
+ New Use Cases: Explore and develop new use cases for D9T, expanding its utility beyond its current mechanism, such as:
+     Staking for rewards.
+     Payments for partner services or products.
+     Access to exclusive functionalities within the Debit9 ecosystem.
+ Education and Awareness: Launch educational and marketing campaigns to raise awareness about D9T, its unique mechanisms, and benefits.
 
-**Social Media:**
-* X (formerly Twitter): [https://x.com/debit9_d9t](https://x.com/debit9_d9t)
-* Telegram: [https://t.me/debit9](https://t.me/debit9)
+Social Media:
+ X (formerly Twitter): [https://x.com/debit9_d9t](https://x.com/debit9_d9t)
+ Telegram: [https://t.me/debit9](https://t.me/debit9)
 
 We are committed to building a solid future for the Debit9 (D9T) Token, with a focus on transparency, security, and value for our community.
