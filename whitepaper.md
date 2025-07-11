@@ -7,7 +7,7 @@
 **Debit9 (D9T)**  
 BEP-20 Token with Intelligent Debt & Burn System  
 *Launch Year: 2025*  
-![Logo Placeholder]
+![Debit9 Logo]([https://github.com/USUARIO/REPO/raw/main/logo.png](https://github.com/debit9-d9t/bsc/blob/main/logo.png))
 
 ---
 
